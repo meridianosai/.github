@@ -1,0 +1,39 @@
+name: 问题 / 需求
+description: 把一件事说清楚，让不懂技术的人也能读明白。技术细节写在第一条评论里，不进正文。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **标题写结果，不写现象**：读标题就知道做完之后多了什么。
+        ✓ 资料库能读懂文件里的图片　　✗ 上传图片会失败
+
+        三条说话规则：讲看得见的现象，不讲里面怎么运作；一句话说一件事；少堆名词，多用动词。
+        文件路径、行号、方案、要拍板的问题，写在**第一条评论**里给开发看。
+  - type: textarea
+    id: situation
+    attributes:
+      label: 现在什么情况
+      description: 具体场景，能看见的：做了什么、看到了什么。不写系统里面怎么运作。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 有什么不对
+      description: 谁受影响、造成什么后果。这段决定别人要不要管。
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: 做成什么样
+      description: 终点。做到这儿算完。
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 这次不做什么
+      description: 边界。不写就会越做越大。相关的票在这里点名：同仓写 #123，跨仓写 meridianosai/<repo>#123。
+    validations:
+      required: false
